@@ -3,138 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио программиста</title>
+    <title>Резюме Программиста</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            background-color: #f0f0f0;
+            color: #333;
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
+            max-width: 1100px;
+            margin: 50px auto;
             padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
-        .about,
-        .stack,
-        .projects {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .header {
+            text-align: center;
+            background-color: #4CAF50;
+            padding: 30px;
+            border-radius: 10px 10px 0 0;
+            color: white;
         }
 
-        h2 {
-            color: #333;
+        .header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .profile {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .profile div {
+            flex: 1 1 45%;
+        }
+
+        .profile img {
+            max-width: 150px;
+            border-radius: 50%;
             margin-bottom: 10px;
         }
 
-        .about p,
-        .stack ul,
-        .projects .project {
-            margin-bottom: 15px;
-            line-height: 1.6;
+        .section {
+            margin-top: 40px;
+            padding: 0 30px;
         }
 
-        .stack ul {
-            list-style: none;
+        .section h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .skills ul, .experience ul, .education ul {
+            list-style-type: none;
             padding: 0;
         }
 
-        .stack ul li {
-            display: inline-block;
-            background-color: #333;
-            color: white;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 4px;
+        .skills ul li, .experience ul li, .education ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .projects .project {
-            margin-bottom: 20px;
+        .skills ul li:hover, .experience ul li:hover, .education ul li:hover {
+            background-color: #e6e6e6;
         }
 
-        .projects .project h3 {
-            margin-bottom: 5px;
+        .skills ul li i, .experience ul li i, .education ul li i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 10px 0;
         }
 
         footer {
             text-align: center;
-            padding: 10px;
             background-color: #333;
             color: white;
-            margin-top: 20px;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Стили для адаптивности */
+        @media (max-width: 768px) {
+            .profile div {
+                flex-basis: 100%;
+                text-align: center;
+            }
+
+            .skills ul li, .experience ul li, .education ul li {
+                text-align: left;
+            }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Портфолио Дмитрия</h1>
-</header>
-
 <div class="container">
+    <!-- Шапка -->
+    <div class="header">
+        <h1>Дмитрий Полуэктов</h1>
+        <p>Программист | Инженер в ПАО МТС</p>
+    </div>
 
-    <section class="about">
-        <h2>Обо мне</h2>
-        <p>Я — программист с опытом работы в Java, Spring Boot, JavaFX и Kotlin. Занимаюсь разработкой как клиентских, так и серверных приложений. Люблю решать сложные задачи и учиться новому.</p>
-    </section>
+    <!-- Основная информация -->
+    <div class="profile">
+        <div>
+            <h2>Обо мне</h2>
+            <p>Я начинал свою карьеру инженером в ПАО МТС, но вскоре понял, что мое настоящее призвание — программирование.
+                Люблю решать сложные задачи и автоматизировать процессы. Уверен, что код может изменить мир, и я готов к этому вкладу.
+                Ищу новые проекты и возможности для профессионального роста.</p>
+        </div>
+        <div>
+            <img src="profile-picture.jpg" alt="Фото профиля">
+        </div>
+    </div>
 
-    <section class="stack">
-        <h2>Мой стек технологий</h2>
+    <!-- Секция Навыков -->
+    <div class="section skills">
+        <h2>Навыки</h2>
         <ul>
-            <li>Java</li>
-            <li>Spring Boot</li>
-            <li>Hibernate</li>
-            <li>JavaFX</li>
-            <li>Kotlin</li>
-            <li>REST API</li>
-            <li>SQL</li>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
+            <li><i class="fas fa-code"></i> Java Core</li>
+            <li><i class="fas fa-code-branch"></i> Git</li>
+            <li><i class="fas fa-cogs"></i> Spring Boot, Spring Security, Spring Web</li>
+            <li><i class="fas fa-database"></i> Hibernate, SQL (PostgreSQL, MySQL)</li>
+
         </ul>
-    </section>
+    </div>
 
-    <section class="projects">
-        <h2>Проекты</h2>
+    <!-- Секция Опыт -->
+    <div class="section experience">
+        <h2>Опыт работы</h2>
+        <ul>
+            <li>
+                <strong>Инженер в ПАО МТС</strong> (2019 - настоящее время)
+                <p>Разработка и поддержка внутренних систем компании. Работа с Java, Spring, интеграция программных решений.</p>
+            </li>
+            <li>
+                <strong>Фриланс</strong> (2017 - 2019)
+                <p>Создание веб-приложений на Java с использованием Spring Framework, настройка и поддержка баз данных.</p>
+            </li>
+        </ul>
+    </div>
 
-        <div class="project">
-            <h3>Telegram Bot - Генератор никнеймов</h3>
-            <p>Бот, написанный на Java с использованием библиотеки Telegram API. Принимает входные данные, генерирует никнейм на основе настроек пользователя и возвращает результат.</p>
-        </div>
+    <!-- Секция Образование -->
+    <div class="section education">
+        <h2>Образование</h2>
+        <ul>
+            <li>
+                <strong>ДГТУ</strong> Высшее образование  — Специальность: Программирование
+                <p>2014 - 2018</p>
+            </li>
+        </ul>
+    </div>
 
-        <div class="project">
-            <h3>Веб-приложение для управления задачами</h3>
-            <p>Приложение на основе Spring Boot с базой данных MySQL для управления личными и командными задачами, с возможностью постановки задач, отслеживания выполнения и создания отчетов.</p>
-        </div>
+    <!-- Контакты -->
+    <div class="contact-info">
+        <h2>Контакты</h2>
+        <p>Email: dim3333333333@yandex.ru</p>
 
-        <div class="project">
-            <h3>JavaFX приложение для работы с файлами</h3>
-            <p>Десктопное приложение, которое позволяет пользователю выбирать файлы, извлекать метаданные и генерировать отчеты. Написано на JavaFX и интегрировано с внешними API для получения дополнительной информации.</p>
-        </div>
-    </section>
-
+    </div>
 </div>
 
-<footer>
-    <p>Свяжитесь со мной: uliana@example.com</p>
-</footer>
+
 
 </body>
 </html>
